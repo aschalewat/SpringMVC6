@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+<Configure class="org.eclipse.jetty.webapp.WebAppContext" id="springwebapp">
+	<Set name="contextPath">/springwebapp</Set>
+	<Call name="setAttribute">
+		<Arg>org.eclipse.jetty.server.webapp.WebInfIncludejarPattern</Arg>
+		<Arg>.*/spring-web[^/]*\jar$|.*/classes/.*</Arg>
+	</Call>
+</Configure>
