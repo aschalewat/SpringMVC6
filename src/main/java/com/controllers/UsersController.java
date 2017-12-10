@@ -24,6 +24,7 @@ public class UsersController {
     // third change made
 
     // bugfix branch created
+    // the bug is fixed now
     // bug fix branch created from master
     @Autowired
     UsersService userServices;
