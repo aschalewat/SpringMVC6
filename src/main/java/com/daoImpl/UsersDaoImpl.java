@@ -30,7 +30,7 @@ public class UsersDaoImpl implements UsersDao {
         return true;
     }
 
-    //@Transactionalfhgfhfhgtyytty
+    //@Transactinal
     public List<Users> list() {
         if (sessionFactory != null){
             System.out.println("SessionFactory is not null.");
