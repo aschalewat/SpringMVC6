@@ -27,9 +27,8 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
     </bean>
  
     <!-- Session Factory Declaration -->
-    <!--"  org.hibernate.internal.SessionFactoryImpl   LocalSessionFactoryBean"-->
     <bean id="sessionFactory"
-        class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="packagesToScan" value="com.entities" />
         <property name="hibernateProperties">
@@ -45,26 +44,19 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
         </property>
     </bean>
  
-    <tx:annotation-driven  />
+    <tx:annotation-driven transaction-manager="transactionManager" />
  
     <bean id="transactionManager"
         class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 
-
-    <bean id="usersDaoImpl" class="com.daoImpl.UsersDaoImpl">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-
-
-
-    <!--<bean id="circle" class="spring.Circle">
-        <property name="center" value="pointA" />
+    <bean id="circle" class="spring.Circle">
+        <property name="centre" ref="pointA" />
     </bean>
 
     <bean id="pointA" class="spring.Point">
         <property name="x" value="0"/>
         <property name="y" value="0"/>
-    </bean>-->
+    </bean>
 </beans>
