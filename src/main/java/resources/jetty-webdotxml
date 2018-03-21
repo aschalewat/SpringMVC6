@@ -5,6 +5,6 @@
 	<Call name="setAttribute">
 		<Arg>org.eclipse.jetty.server.webapp.WebInfIncludejarPattern</Arg>
 		<Arg>.*/spring-web[^/]*\jar$|.*/classes/.*</Arg>
-		
+
 	</Call>
 </Configure>
